@@ -36,13 +36,13 @@ export default function ChatbotWindow({ onClose }) {
     <div className="chatbot-window">
       <div className="chatbot-header">
         Construction Assistant
-        <span onClick={onClose}>✖</span>
+        <span onClick={onClose} style={{ cursor: "pointer" }}>✖</span>
       </div>
 
       <div className="chatbot-messages">
         {messages.map((m, i) => (
           <div key={i} className={m.sender}>
-            <b>{m.sender === "user" ? "You" : "Bot"}:</b> {m.text}
+            <span>{m.text}</span>
           </div>
         ))}
       </div>
@@ -58,3 +58,4 @@ export default function ChatbotWindow({ onClose }) {
     </div>
   );
 }
+

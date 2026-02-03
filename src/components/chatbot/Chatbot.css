@@ -60,7 +60,11 @@
   flex: 1;
   padding: 10px;
   border: none;
+  outline: none;
+  color: #111827;          /* text color */
+  background-color: white; /* force white */
 }
+
 
 .chatbot-input button {
   background: #2563eb;
@@ -69,3 +73,21 @@
   padding: 10px 14px;
   cursor: pointer;
 }
+.user span {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.bot span {
+  display: inline-block;
+  background: #e5e7eb;
+  color: #111827;
+  padding: 6px 10px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
