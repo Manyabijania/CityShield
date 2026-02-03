@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# chatbot .env to hide the api of hugging face
+.env
+

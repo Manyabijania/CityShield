@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import ChatbotIcon from "../chatbot/ChatbotIcon";
+
 
 const Dashboard = ({ onCreateNew, projects }) => { // 1. Use the 'projects' prop
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -12,6 +14,11 @@ const Dashboard = ({ onCreateNew, projects }) => { // 1. Use the 'projects' prop
   };
 
   return (
+
+    
+
+
+
     <div className="flex-1 p-6 overflow-y-auto bg-[#0b1120]">
       <div className="max-w-[75%] mx-auto">
         <div className="mb-12 flex justify-between items-center">
@@ -19,6 +26,10 @@ const Dashboard = ({ onCreateNew, projects }) => { // 1. Use the 'projects' prop
             <h1 className="text-4xl font-bold tracking-tight mb-3">Welcome back, Analyzer</h1>
             <p className="text-xl text-gray-400 font-medium">Manage your urban impact simulations and city vital reports.</p>
           </div>
+              {/* Use ChatbotIcon here */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <ChatbotIcon />
+      </div>
           <button 
             onClick={() => setIsModalOpen(true)}
             className="bg-blue-600 hover:bg-blue-500 text-white font-black text-lg py-4 px-8 rounded-xl flex items-center gap-3 shadow-xl shadow-blue-900/40 transition-all active:scale-95"
@@ -107,6 +118,8 @@ const Dashboard = ({ onCreateNew, projects }) => { // 1. Use the 'projects' prop
         </div>
       )}
     </div>
+    
+
   );
 };
 
